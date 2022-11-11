@@ -40,12 +40,6 @@ function processStones(event) {
   // when this function is used as an event handler: this === evt.currentTarget
   nodeArray = Array.from(stonesIndex);
 
-  /* for (const currentNode of nodeArray) {
-    if (currentNode.style.transform !== "none") {
-      return;
-    }
-  }*/
-
   const stoneIndex = nodeArray.indexOf(event.target); // index of the stone chosen
 
   if (stoneIndex > 3) {
@@ -127,38 +121,6 @@ stoneTransition.addEventListener("transitionend", (event) => {
   event.target.style.transform = "none";
   return;
 });
-
-/*  switch (direction) {
-    case "up":
-      swapNodes(
-        stonesIndex[stoneInTransition],
-        stonesIndex[stoneInTransition - 4]
-      );
-      break;
-    case "down":
-      swapNodes(
-        stonesIndex[stoneInTransition],
-        stonesIndex[stoneInTransition + 4]
-      );
-      break;
-    case "right":
-      swapNodes(
-        stonesIndex[stoneInTransition],
-        stonesIndex[stoneInTransition + 1]
-      );
-      break;
-    case "left":
-      swapNodes(
-        stonesIndex[stoneInTransition],
-        stonesIndex[stoneInTransition - 1]
-      );
-  }
-
-  stonesIndex[stoneInTransition].style.transform = "none";
-  stonesIndex = document.querySelectorAll(".stone");
-  stoneInTransition = 100;
-  direction = undefined;
-});*/
 
 function vinnerCheck() {}
 
