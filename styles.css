@@ -36,6 +36,6 @@ body {
   align-items: center;
   user-select: none;
   position: relative;
-  transition-duration: 200ms;
+  transition-duration: 300ms;
   transition-property: transform;
 }
