@@ -2,7 +2,6 @@ const button = document.querySelector(".btn");
 //let stonesIndex = document.querySelectorAll(".stone");
 const stoneTransition = document.querySelector(".gameField");
 
-
 function shuffleStones() {
   const unshuffled = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0];
   const stonesIndex = document.querySelectorAll(".stone");
@@ -37,13 +36,14 @@ function processStones(event) {
   // when this function is used as an event handler: this === evt.currentTarget
   const nodeArray = Array.from(stonesIndex);
 
-    for (const nodeItem of nodeArray) {
-    if (nodeItem.style.transform !== "" && nodeItem.style.transform !== "none") {
-    return
+  for (const nodeItem of nodeArray) {
+    if (
+      nodeItem.style.transform !== "" &&
+      nodeItem.style.transform !== "none"
+    ) {
+      return;
     }
-    
   }
-  
 
   const stoneIndex = nodeArray.indexOf(event.target); // index of the stone chosen
 
