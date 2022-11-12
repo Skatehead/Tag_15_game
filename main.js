@@ -21,6 +21,8 @@ function shuffleStones() {
     atr.value = `${shuffled[i]}`;
     stonesIndex[i].setAttributeNode(atr);
   }
+  let rounds = document.querySelector(".rounds");
+  rounds.textContent = "0";
 }
 
 function swapNodes(node1, node2) {
@@ -122,7 +124,9 @@ stoneTransition.addEventListener("transitionend", (event) => {
       nodeArray[nodeArray.indexOf(event.target) - 1]
     );
   }
-
+  let rounds = document.querySelector(".rounds");
+  let roundsNum = Number(rounds.textContent) + 1;
+  rounds.textContent = roundsNum;
   event.target.style.transform = "none";
   return;
 });
