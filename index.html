@@ -15,7 +15,14 @@
         <p class="rounds">0</p>
       </label>
     </section>
-    <section class="container">
+    <div class="container">
+      <div class="vinnerMessage">
+        <label for="name">Type in your name champ!</label>
+
+        <input type="text" id="name" name="name" required
+        minlength="4" maxlength="8" size="8" action="javascript: submitChamp();">
+        <input type="button" class="submit" value="DONE">
+      </div>
       <div class="gameField">
         <div class="stone"></div>
         <div class="stone"></div>
@@ -34,8 +41,11 @@
         <div class="stone"></div>
         <div class="stone"></div>
       </div>
+    </div>
+    <section class="scoreTable">
+      <p>Top 5 players</p>
+      <div class="top5"></div>      
     </section>
-    <section class="scoreTable"></section>
 
     <script src="main.js"></script>
   </body>
